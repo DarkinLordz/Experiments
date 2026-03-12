@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){ // Simple ahh calculator
     
     int result = 0;
 
-    if (operator == '+'){
+    if (operator == '+'){ // Why am I even doing this
         result = num1 + num2;
     } else if (operator == '-'){
         result = num1 - num2;
