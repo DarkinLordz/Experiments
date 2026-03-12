@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[]){ // Simple ahh calculator
 
     if (argc != 4){
         return 1;
