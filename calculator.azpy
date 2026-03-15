@@ -1,0 +1,13 @@
+ədəd_1 = rəqəm(soruş("İlk ədədi daxil edin: "))
+ədəd_2 = rəqəm(soruş("İkinci ədədi daxil edin: "))
+əməliyyat = soruş("Əməliyyat daxil edin: ")
+əgər əməliyyat == "+":
+    çap(ədəd_1 + ədəd_2)
+digər əməliyyat == "-":
+    çap(ədəd_1 - ədəd_2)
+digər əməliyyat == "*":
+    çap(ədəd_1 * ədəd_2)
+digər əməliyyət == "/":
+    çap(ədəd / ədəd_2)
+yoxsa:
+    çap("Yanlış əməliyyat")
