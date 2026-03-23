@@ -21,7 +21,11 @@ int main(int argc, char *argv[]){
         scanf("%d", &guess);
         if (guess == num){
             break;
-        } else {
+        } else if (guess > num){
+            printf("Too high\n");
+            continue;
+        } else if (guess < num){
+            printf("Too low\n");
             continue;
         }
     }
