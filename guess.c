@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
     while (1){
         scanf("%d", &guess);
         if (guess == num){
-            break;
+            __asm__ volatile("movq $60, %rax\n\t" "movq $0, %rdi\n\t" "syscall\n");
         } else if (guess > num){
             printf("Too high\n");
             continue;
