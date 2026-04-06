@@ -1,35 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[]){ // Simple ahh calculator
+int main(void){
+    float num1;
+    float num2;
+    float result;
+    char operator;
 
-    if (argc != 4){
-        return 1;
-    }
+    printf("Enter first number: ");
+    scanf("%f", &num1);
+    printf("Enter second number: ");
+    scanf("%f", &num2);
+    printf("Enter operator: ");
+    scanf(" %c", &operator);
 
-    int num1 = atoi(argv[1]);
-    int num2 = atoi(argv[3]);
-    
-    char operator = argv[2][0];
-    
-    int result = 0;
-
-    if (operator == '+'){ // Why am I even doing this
+    if (operator == '+'){
         result = num1 + num2;
     } else if (operator == '-'){
         result = num1 - num2;
-    } else if (operator == '*'){ 
+    } else if (operator == '*'){
         result = num1 * num2;
     } else if (operator == '/'){
-        if (num2 == 0) {
-            return 1;
-        }
         result = num1 / num2;
     } else {
+        printf("Invalid operator\n");
         return 1;
     }
 
-    printf("%d %c %d = %d\n", num1, operator, num2, result);
+    printf("%f\n", result);
 
     return 0;
 }
