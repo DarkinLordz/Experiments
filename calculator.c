@@ -6,12 +6,19 @@ int main(void){
     float result;
     char operator;
 
+    int matched = 0;
+
     printf("Enter first number: ");
-    scanf("%f", &num1);
+    matched += scanf("%f", &num1);
     printf("Enter second number: ");
-    scanf("%f", &num2);
+    matched += scanf("%f", &num2);
     printf("Enter operator: ");
     scanf(" %c", &operator);
+
+    if (matched != 2){
+        printf("Invalid number");
+        return 1;
+    }
 
     if (operator == '+'){
         result = num1 + num2;
@@ -22,7 +29,7 @@ int main(void){
     } else if (operator == '/'){
         result = num1 / num2;
     } else {
-        printf("Invalid operator\n");
+        printf("Invalid operator");
         return 1;
     }
 
